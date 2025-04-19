@@ -1,5 +1,5 @@
 import React from "react";
-import UserPage from "./UserPage"; // Import the UserPage component
+import UserPage from "./component/Userpage"; // Import the UserPage component
 import "./App.css"; // Optional: if you have a global stylesheet
 
 const App = () => {
