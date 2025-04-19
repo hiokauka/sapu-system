@@ -1,0 +1,44 @@
+.user-page {
+    font-family: Arial, sans-serif;
+  }
+  
+  .tabs {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  .tabs button {
+    margin-right: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .tabs .active {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .add-order, .see-order {
+    margin-top: 20px;
+  }
+  
+  .add-order form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .add-order input, .add-order textarea {
+    margin-bottom: 10px;
+    padding: 8px;
+    width: 300px;
+  }
+  
+  .see-order ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .see-order li {
+    margin-bottom: 10px;
+  }
+  
