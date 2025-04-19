@@ -1,0 +1,100 @@
+.chatbox-container {
+    width: 100%;
+    max-width: 450px;
+    height: 550px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #1d1d1d; /* Black background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Darker shadow to match the dark theme */
+    margin: 20px auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white; /* Change text color to white for contrast */
+  }
+  
+  .chatbox-header {
+    padding: 12px;
+    background-color: #808080; /* Grey header */
+    color: white;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  .chatbox-messages {
+    flex: 1;
+    padding: 12px;
+    overflow-y: auto;
+    background-color: #333333; /* Darker background for messages */
+  }
+  
+  .chat-message {
+    display: flex;
+    margin-bottom: 12px;
+  }
+  
+  .user-msg {
+    justify-content: flex-end;
+  }
+  
+  .driver-msg {
+    justify-content: flex-start;
+  }
+  
+  .chat-bubble {
+    max-width: 70%;
+    padding: 12px 16px;
+    border-radius: 16px;
+    position: relative;
+    background-color: #4f4f4f; /* Grey bubbles for both user and driver */
+    color: white;
+    font-size: 14px;
+  }
+  
+  .user-msg .chat-bubble {
+    background-color: #007bff; /* Blue background for user messages */
+  }
+  
+  .driver-msg .chat-bubble {
+    background-color: #808080; /* Grey background for driver messages */
+  }
+  
+  .chat-time {
+    font-size: 10px;
+    color: #999;
+    display: block;
+    margin-top: 4px;
+    text-align: right;
+  }
+  
+  .chatbox-input {
+    display: flex;
+    border-top: 1px solid #444444; /* Darker border */
+  }
+  
+  .chatbox-input input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    background-color: #555555; /* Dark input field */
+    color: white;
+  }
+  
+  .chatbox-input button {
+    padding: 10px 16px;
+    border: none;
+    background-color: #808080; /* Grey button */
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .chatbox-input button:hover {
+    background-color: #666666; /* Darker grey on hover */
+  }
+  
