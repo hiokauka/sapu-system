@@ -4,6 +4,8 @@ import UserPage from "./component/Userpage";
 import Driver from "./Driver.jsx";
 import DriverOrder from "./DriverOrder.jsx";
 import "./App.css";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import ChatBox from "./component/ChatBox";
 
 const Navigation = () => {
   const location = useLocation();
@@ -34,7 +36,18 @@ const App = () => {
   return (
     <Router>
       <div className="App">
-        <AppRoutes />
+        <h1>Welcome to the User Dashboard</h1>
+
+        {/* Navigation Links */}
+        <nav>
+          <Link to="/">Home</Link> | <Link to="/chat">ChatBox</Link>
+        </nav>
+
+        {/* Define Routes */}
+        <Routes>
+          <Route path="/" element={<UserPage />} />
+          <Route path="/chat" element={<ChatBox />} />
+        </Routes>
       </div>
     </Router>
   );
