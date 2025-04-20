@@ -1,13 +1,42 @@
 import React from "react";
-import UserPage from "./component/Userpage"; // Import the UserPage component
-import "./App.css"; // Optional: if you have a global stylesheet
+import { BrowserRouter as Router, Routes, Route, Link, useLocation } from "react-router-dom";
+import UserPage from "./component/Userpage";
+import Driver from "./Driver.jsx";
+import DriverOrder from "./DriverOrder.jsx";
+import "./App.css";
+
+const Navigation = () => {
+  const location = useLocation();
+
+  // Hide nav on specific pages
+  const hideNavOn = ["/driver-order", "/some-other-page"];
+  if (hideNavOn.includes(location.pathname)) return null;
+
+  return (
+    <nav>
+      <Link to="/">User Page</Link> | <Link to="/driver">Driver</Link>
+    </nav>
+  );
+};
+
+const AppRoutes = () => (
+  <>
+    <Navigation />
+    <Routes>
+      <Route path="/" element={<UserPage />} />
+      <Route path="/driver" element={<Driver />} />
+      <Route path="/driver-order" element={<DriverOrder />} />
+    </Routes>
+  </>
+);
 
 const App = () => {
   return (
-    <div className="App">
-      <h1>Welcome to the User Dashboard</h1>
-      <UserPage /> {/* Render the UserPage component here */}
-    </div>
+    <Router>
+      <div className="App">
+        <AppRoutes />
+      </div>
+    </Router>
   );
 };
 
